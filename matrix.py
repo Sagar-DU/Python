@@ -4,7 +4,7 @@ import numpy as np
 matrix = np.array([
     [2, 1, -1], #first row
     [-3, -1, 2], #second row
-    [-2, 1, 2] #thrid row
+    [1, 1, 2] #thrid row
 ])
 
 # printing the matrix
