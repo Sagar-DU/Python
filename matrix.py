@@ -31,17 +31,31 @@ def row_echelon (matrix):
                     matrix[[col, row]] = matrix [[row, col]]
                 break
         #normalize the pivot row
-        pivot = matrix[col, col]
+        pivot = matrix[row, row]
         if pivot != 0:
-            matrix[col] = matrix[col] / pivot
+            matrix[row] = matrix[row] / pivot
 
         #eleminate the below rows
-        for row in range (col + 1, rows):
+        for row in range (row + 1, rows):
             multiplier = matrix[row, col]
             matrix[row] -= multiplier * matrix[col]
     return matrix
 
 ref_matrix = row_echelon(matrix)
 
-print ("Row Echelon Form:")
+print ("Row Echelon Form: by numpy")
 print (ref_matrix)
+
+import sympy as sp
+
+# Matrix with sympy
+matrix = sp.Matrix([[2, 3, -2],
+                    [-3, -1, 3],
+                    [1, 1, 2]])
+
+# the rref
+ref_matrix = matrix.echelon_form()
+
+print ("RREF of the matrix: by sympy")
+print (sp.pretty(ref_matrix))
+print ("Pivot columns")
