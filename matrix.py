@@ -2,8 +2,8 @@
 import numpy as np
 
 matrix = np.array([
-    [2, 1, -1], #first row
-    [-3, -1, 2], #second row
+    [2, 4, -2], #first row
+    [-3, -1, 3], #second row
     [1, 1, 2] #thrid row
 ])
 
@@ -27,7 +27,7 @@ def row_echelon (matrix):
         for row in range(col, rows):
             if matrix[row, col] != 0:
                 #swap rows if the current pivot is not on the diagonal
-                if row != col:  #need to understand this line
+                if row != col:
                     matrix[[col, row]] = matrix [[row, col]]
                 break
         #normalize the pivot row
