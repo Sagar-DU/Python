@@ -80,3 +80,25 @@ def get_actual_cost (sqft_walls, sqft_ceiling, sqft_per_gallon, cost_per_gallon)
     return cost
 
 print ("The actual cost for the projcect is:", get_actual_cost(432, 144, 400, 15))
+
+# Data Type Question 5
+# You own an online shop where you sell rings with custom engravings. You offer both gold plated and solid gold rings.
+
+# Gold plated rings have a base cost of $50, and you charge $7 per engraved unit.
+# Solid gold rings have a base cost of $100, and you charge $10 per engraved unit.
+# Spaces and punctuation are counted as engraved units.
+# Write a function cost_of_project() that takes two arguments:
+
+# engraving - a Python string with the text of the engraving
+# solid_gold - a Boolean that indicates whether the ring is solid gold
+
+def cost_of_project (engraving, solid_gold):
+    if (solid_gold == True):
+        cost = 100 + 10 * len (engraving)
+    else:
+        cost = 50 + 7 * len (engraving)
+    
+    return cost
+
+print (cost_of_project("Charlie-Denvar", True))
+print (cost_of_project("08/10/2000", False))
