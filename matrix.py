@@ -16,3 +16,5 @@ for i in matrix:
         print ("The", index1, index2, "th element is:", j)
         index2 = index2 + 1
     index1 += 1
+
+# Find the order of the matrix 
